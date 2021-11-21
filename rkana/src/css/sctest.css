@@ -1,0 +1,269 @@
+/* ---------------------------------------------Common------------------------------------------- */
+
+.whiteboard-headers {
+    /* Container that houses the headers for the whiteboard */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    max-width: 768px;
+    margin: auto;
+    margin-top: 15px
+}
+
+.question-header, .header-select {
+    /* Both the whiteboard headers, one is a div, other is a <select> inside a div */
+    width: 200px;
+    padding: 10px;
+    border: solid 2px #333;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.whiteboard {
+    /* Container that houses the question and solution containers */
+    display: flex;
+    height: 10rem;
+    max-width: 768px;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 4rem;
+}
+
+.question-container {
+    /* Container that houses the question ie the left side */
+   width: 50%;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   border-right: solid 3px #333;
+   justify-content: center;
+   align-items: center;
+}
+
+.solution-container {
+    /* Container that houses the solution ie the right side */
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border-left: solid 3px #333;
+    justify-content: center;
+    align-items: center;
+}
+
+.interactions {
+    /* Container that houses the interactive bits, including start/stop buttons, options etc. */
+    display: flex;
+    max-width: 768px;
+    margin: auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    padding-bottom: 0px;
+}
+
+.start-stop {
+    /* Container that houses the start/stop buttons */
+    display: flex;
+}
+
+.btn {
+    /* Styling for the base button of the kind that looks like the start/stop ones */
+    padding: 10px 20px;
+    border: none;
+    font-size: 1.5rem;
+}
+
+.btn-start {
+    /* Styling for the start button */
+    background-color: white;
+    border: solid 2px green;
+    color: green;
+    border-radius: 8px;
+    transition-duration: 0.2s;
+}
+
+.btn-start:hover {
+    /* Animation effects on hover on start button */
+    background-color: green;
+    color: white;
+    transform: scale(1.1);
+    transition-duration: 0.2s;
+    cursor: pointer;
+}
+
+.btn-stop {
+    /* Styling for the stop button */
+    background-color: white;
+    border: solid 2px red;
+    color: red;
+    border-radius: 8px;
+    transition-duration: 0.2s;
+}
+
+.btn-stop:hover {
+    /* Animation effects on honver on stop button */
+    background-color: red;
+    color: white;
+    transform: scale(1.1);
+    transition-duration: 0.2s;
+    cursor: pointer;
+}
+
+.margin-lr-10 {
+    /* Utility class to provide a left and right margin for the start and stop buttons */
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.options {
+    /* Container that houses the available options, ie the range from and to selects and the like */
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 15px;
+    font-size: 1.2rem;
+}
+
+.option-item {
+    padding-bottom: 0px;
+}
+.select-primary {
+    /* Formatting the <select>s that are used for things like "From" and "To" */
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    width: 100px;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.guide {
+    /* Container that houses the guide for the stresstest, the heading and the unordered list */
+    display: flex;
+    margin: auto;
+    max-width: 768px;
+    flex-direction: column;
+    margin-bottom: 1.4rem;
+}
+
+.guide h1{
+    /* Styling the heading that says "How to use" */
+    margin-bottom: 15px;
+    font-size: 2.5rem;
+}
+
+.guide-heading {
+    /* Further styling the heading that says "How to use" */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+}
+
+.guide ul li {
+    /* Styling the unordered list that the guide is written as */
+    padding: 5px 0px;
+    font-size: 1.2rem;
+}
+
+/* --------------------------------------Stresstest exclusive------------------------------------ */
+
+.input-number-primary {
+    /* Styling the number inputs found in stresstest page used to set "Timeout" and "Wait" */
+    font-size: 1.2rem;
+    width: 65px;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.info-alert {
+    /* Info tooltip that appears in stresstest */
+    background-color: #2196F3;
+    color: white;
+    padding: 15px 25px;
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow-wrap: break-word;
+    max-width: 768px;
+    margin: auto;
+}
+
+.close-alert {
+    /* Styling close button for tooltip */
+    font-size: 1.4rem;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.close-alert:hover {
+    /* Hover effect on tooltip close button */
+    color: black;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* ------------------------------------------Lookup test----------------------------------------- */
+.answer-input {
+    /* Container that houses the <input> and the check button and the tick cross area */
+    margin: auto;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#tickCross {
+    /* Container that houses the tick/cross symbol that is displayed on answer checking */
+    font-size: 2rem;
+}
+
+#answerInp {
+    /* The <input> that takes in the answer */
+    font-size: 1.7rem;
+    padding: 0.3rem;
+    width: 125px;
+    margin-right: 0.8rem;
+    text-align: center;
+    border-radius: 4px;
+}
+
+#checkBtn {
+    /* The <button> that checks the answer */
+    width: 90px;
+    padding: 0.6rem;
+    font-size: 1.4rem;
+    border-radius: 4px;
+    background-color: whitesmoke;
+}
+
+
+/* ----------------------------Responsive media queries----------------------------- */
+
+@media (max-width: 768px) {
+    .question-header, .header-select {
+        /* Shrink the headers down a bit so they don't get smooshed */
+        width: 150px;
+    }
+
+    .guide {
+        /* Add margin to the guide so that it doesn't appear too close to the edge */
+        margin-left: 1.6rem;
+    }
+
+    .info-circ {
+        /* Info circle gets smooshed into the text without this */
+        padding-right: 10px;
+    }
+
+    .info-alert {
+        /* Final adjustments to the tooltip thingy */
+        margin-top: 15px;
+        font-size: 0.8rem;
+    }
+}

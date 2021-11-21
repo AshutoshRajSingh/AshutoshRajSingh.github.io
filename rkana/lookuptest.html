@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rkana</title>
+
+  <link rel="stylesheet" href="./src/css/base.css">
+  <link rel="stylesheet" href="./src/css/sctest.css">
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/c63e9fe038.js" crossorigin="anonymous"></script>
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon//favicon-16x16.png">
+</head>
+
+<body onload="onLoad()">
+  <nav class="nav">
+    <div class="nav-container">
+      <div class="nav-title">
+        <a href="./index.html"><h3>Kana randomizer</h3></a>
+      </div>
+    </div>
+  </nav>
+  <div class="whiteboard-headers">
+    <div class="solution-header" onclick="checkAlert()">
+      <select name="questionType" id="qType" class="header-select">
+        <option value="hiragana">Hiragana</option>
+        <option value="katakana">Katakana</option>
+      </select>
+    </div>
+    <div class="question-header">Romaji</div>
+  </div>
+  <div class="whiteboard">
+    <div class="question-container" id="questionContainer">
+      <h1 id="questionHeading"></h1>
+    </div>
+    <div class="solution-container" id="solutionContainer">
+      <h1 id="solutionHeading"></h1>
+    </div>
+  </div>
+  <div class="interactions">
+    <div class="answer-input">
+      <span id="tickCross" style="width: 40px;"></span>
+      <input type="text" name="answer" id="answerInp" disabled="true" placeholder="Answer">
+      <div class="verify"><button disabled id="checkBtn" onclick="checkBtnResponse()">Check</button> </div>
+    </div>
+    <div class="start-stop">
+      <button onclick="startLookupTest()" class="btn btn-start margin-lr-10"><i class="fas fa-play"></i> Start</button>
+      <button onclick="stopLookupTest()" class="btn btn-stop margin-lr-10"><i class="fas fa-stop"></i> Stop</button>
+    </div>
+    <div class="options" style="justify-content: space-evenly;" onclick="checkAlert()">
+      <div class="option-item">
+        From: <select name="from" id="rangeFrom" class="select-primary"></select>
+      </div>
+      <div class="option-item">
+        To: <select name="to" id="rangeTo" class="select-primary"></select>
+      </div>
+    </div>
+  </div>
+  <div class="guide">
+    <h1 class="guide-heading">How to use:</h1>
+
+    <ul>
+      <li>The From dropdown selects the start of the range of letters you wish to practice</li>
+      <li>The To dropdown selects the end of the range of the letters you want to practice</li>
+      <li>The Dropdown on the top left selects whether you want to Hiragana or Katakana letters to be displayed</li>
+      <li>Click start, when you do that, a random Kana letter, based on your specifications will be displayed on the
+        left side</li>
+      <li>You're supposed to write its Romaji form in the text box labelled "Answer"</li>
+      <li>Once you do, you click the Check button or press Enter, when you do this, the correct answer will be displayed
+        on the right side, colored red if your answer was incorrect and green if it was correct, and,
+        the button will change to "Next"</li>
+      <li>To get the next question, click the button Next or simply press Enter</li>
+      <li>To change any of the options after starting, preferably click Stop first</li>
+    </ul>
+  </div>
+  <footer class="footer">
+    <div class="textl">© Copyright 
+      <a href="https://github.com/finite-simple-group-of-order-two/" target="_blank" class="github-username-link">
+       finite-simple-group-of-order-two
+      </a>
+  </div> 
+    <div class="textm">2021-Present</div> 
+    <div class="textr">
+      <a href="https://github.com/finite-simple-group-of-order-two/Rkana" target="_blank">
+        <img src="./assets/GitHub-Mark-64px.png" alt="Github logo" class="footer-github-logo">
+      </a>
+    </div>
+  </footer>
+  <script src="./src/lookuptest.js"></script>
+</body>
+
+</html>

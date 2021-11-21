@@ -1,0 +1,145 @@
+/* Logo */
+.outer-circle {
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    border: 3px solid #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    font-size: 8rem;
+    font-weight: 600;
+    background: -webkit-linear-gradient(60deg, #b91372, #6b0f1a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Homepage */
+
+.album {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.album-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0.7rem;
+    padding: 1rem;
+    border: 1px solid #333;
+    border-radius: 1.5rem;
+    transition-duration: 0.4s;
+}
+
+.album-item:hover {
+    background-color: var(--primary-red);
+    color: white;
+    transform: scale(1.1);
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+.button-graphic {
+    font-size: 2.8rem;
+    font-weight: 2;
+}
+
+.intro-text {
+    padding: 15px;
+}
+
+.intro-text h2 {
+    font-size: 2.3rem;
+    font-weight: 300;
+}
+
+.intro-text p{
+    font-size: 1.2rem;
+}
+
+.features-sec {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.container-two-sbs {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+.indeximg {
+    filter: drop-shadow(5px 5px 2px rgba(51, 51, 51, 0.336));
+    border: solid 1px rgba(51, 51, 51, 0.205);
+    border-radius: 4px;
+    max-height: 400px;
+    width: auto;
+}
+
+.base-container {
+    max-width: 70vw;
+    margin: auto;
+}
+
+.features-heading {
+    font-size: 2.4rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.feature-heading {
+    font-size: 1.7rem;
+    font-weight: 400;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero h1 {
+    font-weight: lighter;
+    margin-top: 1rem;
+}
+.hero-25 {
+    height: 25vh;
+    width: 100vw;
+}
+.hero-30 {
+    height: 30vh;
+    width: 100vw;
+}
+
+@media(max-width: 768px){
+    .container-two-sbs{
+        flex-direction: column;
+    }
+    .flipped {
+        flex-direction: column-reverse;
+    }
+    .indeximg {
+        max-width: 90vw;
+        height: auto;
+    }
+    .base-container {
+        max-width: 90vw;
+    }
+}
